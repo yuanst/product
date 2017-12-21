@@ -25,8 +25,8 @@ public class ptUserServiceImpl implements ptUserService {
 
 	@Override
 	public ptUser getByName(String loginName) {
-		
-		return userMapper.getByName(loginName);
+		ptUser ptUser=userMapper.getByName(loginName);
+		return ptUser;
 	}
 
 }
