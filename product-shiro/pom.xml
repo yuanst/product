@@ -1,0 +1,42 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.product</groupId>
+    <artifactId>product-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.product</groupId>
+  <artifactId>product-shiro</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  
+  	<dependency>
+			<groupId>com.product</groupId>
+			<artifactId>product-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	  <dependency>  
+	       <groupId>org.apache.shiro</groupId>  
+	       <artifactId>shiro-core</artifactId>  
+	       <version>${shiro.version}</version>  
+	   </dependency>  
+	   <dependency>  
+	       <groupId>org.apache.shiro</groupId>  
+	       <artifactId>shiro-web</artifactId>  
+	       <version>${shiro.version}</version>  
+	   </dependency>  
+	   <dependency>  
+	       <groupId>org.apache.shiro</groupId>  
+	       <artifactId>shiro-ehcache</artifactId>  
+	       <version>${shiro.version}</version>  
+	   </dependency>  
+	   <dependency>  
+	       <groupId>org.apache.shiro</groupId>  
+	       <artifactId>shiro-spring</artifactId>  
+	       <version>${shiro.version}</version>  
+	   </dependency> 
+		    
+  </dependencies>
+  
+</project>
