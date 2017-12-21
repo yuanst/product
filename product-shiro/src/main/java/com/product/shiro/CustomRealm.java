@@ -23,7 +23,14 @@ import com.product.model.ptUser;
 import com.product.service.ptPermissionService;
 import com.product.service.ptUserService;
 
-
+/**
+ * 权限验证
+ *<p>Title: CustomRealm</p>
+ * @author yuanst
+ * <p>Company:</p>
+ * @date 2017年12月21日,下午4:15:29
+ * @version 1.0
+ */
 public class CustomRealm  extends AuthorizingRealm {
 	
 	//注入service
