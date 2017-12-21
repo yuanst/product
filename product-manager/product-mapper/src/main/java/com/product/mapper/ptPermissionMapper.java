@@ -4,7 +4,7 @@ import com.product.model.ptPermission;
 import com.product.model.ptPermissionExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
-
+//sssss
 public interface ptPermissionMapper {
     int countByExample(ptPermissionExample example);
 
