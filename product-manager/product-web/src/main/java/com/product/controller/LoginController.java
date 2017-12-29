@@ -38,7 +38,6 @@ public class LoginController {
 	}
 	 @RequestMapping(value="/token")  
 		public String login(HttpServletRequest request) throws Exception{
-			 
 			String loginName=request.getParameter("loginName");
 			if(!Util.checkNull(loginName)){
 				loginName=new String(loginName.getBytes("ISO-8859-1"),"UTF-8");
