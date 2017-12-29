@@ -32,11 +32,11 @@ public class LoginController {
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(LoginController.class);
     
-	@RequestMapping("login")
-	public String login(){
+	@RequestMapping("index")
+	public String index(){
 		return "login";
 	}
-	 @RequestMapping(value="/token")  
+	 @RequestMapping(value="/login")  
 		public String login(HttpServletRequest request) throws Exception{
 			String loginName=request.getParameter("loginName");
 			if(!Util.checkNull(loginName)){

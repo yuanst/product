@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+    <!-- 指明满足“/*”的页面，将被“/WEB-INF/views/decorators/decorator.html”所装饰 -->
+
+   
+   <!--带有菜单栏的装饰页面  -->  
+   <mapping decorator="/WEB-INF/sitemesh/left.jsp"/>  
+   <!--登录页面不被装饰。没有配置为true的页面，表示使用装饰页面,例如index.jsp -->  
+   
+<!--    <mapping  path="/index*" exclue="true" />
+ --> 
+</sitemesh>
