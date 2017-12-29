@@ -7,8 +7,8 @@ import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.prodct.search.dao.TbItemMapper;
-import com.prodct.search.pojo.TbItem;
+import com.product.search.dao.TbItemMapper;
+import com.product.search.pojo.TbItem;
 import com.product.search.service.TbItemService;
 
 @Service

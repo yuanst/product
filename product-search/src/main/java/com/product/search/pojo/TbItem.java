@@ -1,4 +1,4 @@
-package com.prodct.search.pojo;
+package com.product.search.pojo;
 
 public class TbItem {
 	private String id;

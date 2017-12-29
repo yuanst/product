@@ -1,8 +1,8 @@
-package com.prodct.search.dao;
+package com.product.search.dao;
 
 import java.util.List;
 
-import com.prodct.search.pojo.TbItem;
+import com.product.search.pojo.TbItem;
 
 public interface TbItemMapper {
 
