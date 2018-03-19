@@ -7,12 +7,14 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.apache.commons.collections.map.ListOrderedMap;
 import org.apache.commons.lang.StringUtils;
 
 //import com.sun.xml.internal.messaging.saaj.packaging.mime.internet.MimeUtility;
@@ -332,5 +334,27 @@ public class Util {
 		}
 		return val;
 	}
-		
+	/**
+	 * 数据保留两位小数不用科学算数
+	 */
+	public static String formatMath(Double doub){
+	    DecimalFormat df1 = new DecimalFormat("0.00");
+        return df1.format(doub);  
+	}
+	/**
+	 * 对map进行排序并返回ListOrderedMap
+	 */
+	 public static Map<String, Object> getMap(Map<String, Object> map){
+	       Map<String, Object> orderedMap=(Map<String, Object>)new ListOrderedMap();
+	       List<Integer> list=new ArrayList<Integer>();
+	       for (Map.Entry<String, Object> entry : map.entrySet()) {  
+	           list.add(Integer.valueOf(entry.getKey()));
+	       }  
+	       Collections.sort(list);
+	       for (int i = 0; i < list.size(); i++) {
+	           orderedMap.put(String.valueOf(list.get(i)), map.get(String.valueOf(list.get(i))));
+	    }
+	    return orderedMap;
+	       
+	   }
 }

@@ -10,7 +10,17 @@
 
 	<!-- 数据库连接池 -->
 	<!-- 加载配置文件 -->
-	<context:property-placeholder location="classpath:resource/*.properties" />
+	<!-- <context:property-placeholder location="classpath:resource/*.properties" /> -->
+	<bean id="config" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
+        <property name="locations">
+             <list>
+                 <value>classpath:resource/*.properties</value>
+             </list>
+         </property>
+     </bean>
+     <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PreferencesPlaceholderConfigurer">
+         <property name="properties" ref="config" />
+     </bean>  
 	<!-- 数据库连接池 -->
 	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource"
 		destroy-method="close">
@@ -28,7 +38,7 @@
 	</bean>
 	<!-- 配置扫描包，加载mapper代理对象 -->
 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-		<property name="basePackage" value="com.product.mapper,com.product.search.dao"></property>
+		<property name="basePackage" value="com.product.mapper,com.product.search.mapper"></property>
 		<property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
 	</bean>
 </beans>

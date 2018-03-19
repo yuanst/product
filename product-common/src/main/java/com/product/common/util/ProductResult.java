@@ -110,6 +110,7 @@ public class ProductResult {
         }
     }
 
+  
     /**
      * 没有object对象的转化
      * 

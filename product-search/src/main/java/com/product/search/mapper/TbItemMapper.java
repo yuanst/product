@@ -1,4 +1,4 @@
-package com.product.search.dao;
+package com.product.search.mapper;
 
 import java.util.List;
 

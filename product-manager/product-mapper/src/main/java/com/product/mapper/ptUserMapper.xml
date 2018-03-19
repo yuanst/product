@@ -211,7 +211,7 @@
   <select id="getByName" resultMap="BaseResultMap" parameterType="string" >
     select 
     <include refid="Base_Column_List" />
-    from pt_user
+    from pt_user where
    login_name = #{loginName,jdbcType=VARCHAR}
   </select>
   
