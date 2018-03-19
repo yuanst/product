@@ -22,7 +22,11 @@ import com.product.search.service.SearchService;
 public class SearchController {
 	@Autowired
 	private SearchService searchService;
-	
+	/**
+	 * 查询测试
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value="/query",method=RequestMethod.GET)
 	@ResponseBody
 	public String query(HttpServletRequest request){
